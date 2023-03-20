@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 import argparse 
+import os
 
 import tensorflow as tf 
+import tensorflow_text
 
 
 def cli() -> argparse.Namespace:
@@ -20,6 +22,7 @@ def inference(model, query: str) -> float:
 
 
 def main() -> None:
+    os.environ["TF_CPP_MIN_LOG_LEVEL"] = "1"
     args = cli()
     model = tf.saved_model.load(args.model_dir)
     print(inference(model, args.input))

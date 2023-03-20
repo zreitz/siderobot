@@ -4,3 +4,4 @@ dependencies:
   - pip
   - pip:
     - tensorflow
+    - tensorflow-text
