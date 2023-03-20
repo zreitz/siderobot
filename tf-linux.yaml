@@ -1,0 +1,6 @@
+name: tf-linux
+dependencies:
+  - python=3.9
+  - pip
+  - pip:
+    - tensorflow
